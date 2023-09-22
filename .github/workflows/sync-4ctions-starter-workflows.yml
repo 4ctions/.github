@@ -10,6 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: git clone https://github.com/4ctions/starter-workflows.git /tmp/starter-workflows
-      - run: rsync -av /tmp/starter-workflows/workflow-templates/ workflow-templates/
+      - run: git clone https://github.com/4ctions/starter-workflows.git /tmp/sw
+      - run: rsync -av /tmp/sw/workflow-templates/ workflow-templates/
       - uses: stefanzweifel/git-auto-commit-action@v4
