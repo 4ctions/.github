@@ -5,4 +5,11 @@ on:
   workflow_dispatch:
 jobs:
   sync-4ctions-starter-workflows:
-    uses: 4ctions/starter-workflows/.github/workflows/sync-4ctions-starter-workflows.yml@main
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: git clone https://github.com/4ctions/starter-workflows.git /tmp/starter-workflows
+      - run: rsync -av /tmp/starter-workflows/workflow-templates/ workflow-templates/
+      - uses: stefanzweifel/git-auto-commit-action@v4
