@@ -1,0 +1,7 @@
+name: Sync 4ctions/starter-workflows
+on:
+  schedule:
+    - cron: "23 3 * * *"
+jobs:
+  sync-4ctions-starter-workflows:
+    uses: 4ctions/starter-workflows/.github/workflows/sync-4ctions-starter-workflows.yml@v1
