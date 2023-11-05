@@ -1,6 +1,0 @@
-{
-  "name": "Hexo",
-  "description": "Package a Hexo site.",
-  "iconName": "hexo",
-  "categories": ["Pages", "Hexo"]
-}
